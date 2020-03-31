@@ -16,7 +16,7 @@ This project is not a game, and doesn't have any "play mode" controls, the only 
 
 You can also have fun with the boids behaviour by editing the Cohesion,Attraction and Seperations intensitiy/radius variables and see how the boids react.
 
-![Image Du Jeu]()
+![Image Du Jeu](https://github.com/Clemyxy/boids-simulation/blob/master/BoidsScreen.png)
 # Leads
 
 ## Performances
@@ -28,15 +28,12 @@ You can also have fun with the boids behaviour by editing the Cohesion,Attractio
 ### To Consider
 
 * Multithreading
-
-  *Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.
-    
+  *Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.   
   *Unity may not be thread-safe outside of its job system. It could be a hassle to use multithreading.
 
 * Space partitioning
 
 * Unity ECS
-
   *Adds a lot more complexity for a huge performance gain.
 
 # Resources
