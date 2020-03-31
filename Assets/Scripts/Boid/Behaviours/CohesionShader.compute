@@ -1,0 +1,48 @@
+﻿// !! Compute Shader, ne jamais commenter sur la meme ligne qu'un bout de code !!
+#pragma kernel CohesionKernel
+
+#include "UnityCG.cginc"
+
+//Structure de boid
+struct boid{
+    float3 position;
+    float3 acceleration;
+};
+//Buffer de boids
+RWStructuredBuffer<boid> currentBuffer;
+
+
+//Infos a ne recuperer qu'une fois (infos n'appartenant pas a un boid)
+CBUFFER_START(Params)
+	float intensity;
+    float radius;
+    float boidsCount;
+CBUFFER_END
+
+//Nombre de threads a executer
+[numthreads(128,1,1)]
+void CohesionKernel (uint3 id : SV_DispatchThreadID)
+{
+    //Recupère le boid sur lequel le code va agir
+    boid boid = currentBuffer[id.x];
+
+    //Initialise les valeurs de calcul
+    float count = 1.f;
+    float3 average_position = float3(0,0,0);
+
+    //Compare chaque boids
+    for(int i = 0; i< boidsCount; i++){
+        if( distance(boid.position,currentBuffer[i].position) <= radius) {
+            average_position += currentBuffer[i].position;
+            count += 1.f;
+        }
+    }
+
+    //Calcule la nouvelle acceleration
+    average_position /= count;
+    float3 displacement = normalize(average_position - boid.position);
+    boid.acceleration += intensity * displacement;
+
+    //Met a jour le boid pour lequel le shader viens de faire les calculs
+    currentBuffer[id.x] = boid;
+}
