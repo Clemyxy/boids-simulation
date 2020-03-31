@@ -17,6 +17,9 @@ This project is not a game, and doesn't have any "play mode" controls, the only 
 You can also have fun with the boids behaviour by editing the Cohesion,Attraction and Seperations intensitiy/radius variables and see how the boids react.
 
 ![Image Du Jeu](https://github.com/Clemyxy/boids-simulation/blob/master/BoidsScreen.png)
+
+Two premade Scenes are available, one with 1000 boids (Warning for lower end pc configuration, may lag serverly),
+and one with 1000 bois in an aquarium, which keep them in one space (Even tho there still are boids leaks).
 # Leads
 
 ## Performances
