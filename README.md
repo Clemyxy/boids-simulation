@@ -99,3 +99,5 @@ and one with 1000 bois in an aquarium, which keep them in one space (Even tho th
 
 [(Unity) Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
+#### Project made in collaboration with Collinette Bastien during our 3rd year in Lyon1's Licence.
+Find his github here: https://github.com/COLLINETTEBastien
