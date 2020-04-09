@@ -31,8 +31,8 @@ and one with 1000 bois in an aquarium, which keep them in one space (Even tho th
 ### To Consider
 
 * Multithreading
-  *Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.   
-  *Unity may not be thread-safe outside of its job system. It could be a hassle to use multithreading.
+*Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.   
+*Unity may not be thread-safe outside of its job system. It could be a hassle to use multithreading.
 
 * Space partitioning
 
