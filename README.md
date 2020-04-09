@@ -29,16 +29,14 @@ and one with 1000 bois in an aquarium, which keep them in one space (Even tho th
 - Compute Shaders
 
 ### To Consider
-* Creating BPs:
-  * Adding Components in Unreal and Through C++.
 * Multithreading:
-  *Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.   
-  *Unity may not be thread-safe outside of its job system. It could be a hassle to use multithreading.
+  * Probably not that interesting considering that compute shaders are just a much better alternative in the case of Boids.   
+  * Unity may not be thread-safe outside of its job system. It could be a hassle to use multithreading.
 
 * Space partitioning
 
 * Unity ECS:
-  *Adds a lot more complexity for a huge performance gain.
+  * Adds a lot more complexity for a huge performance gain.
 
 # Resources
 
